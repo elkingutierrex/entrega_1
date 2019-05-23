@@ -29,7 +29,7 @@ const argv = require('yargs')
 let inscribirse = (argv) => {
      
 
-    if (argv.m == 1) {
+    if (argv.m == 'inscribirse') {
         let cursoX;
 
         opcCurso.cursos.forEach((x) => {
@@ -48,7 +48,7 @@ let inscribirse = (argv) => {
                     ' Tiene una duracion de de : '+cursoX.duracionhoras +' horas' + "\r\n" +
                     ' valor a cancelar de la matricula : $ ' + cursoX.valor);
             fs.writeFile(argv.n + argv.c + 'Matricula.txt', texto, (err) => {
-                if (err) throw (err);
+                if (err) throw (err);                
                 console.log('Se ha creado el archivo, y la matricula se ha generado correctamente, bienvenido al curso de ' + cursoX.nombre )
             })
 
@@ -56,7 +56,7 @@ let inscribirse = (argv) => {
 
     } else {        
         console.log('Si desea generar matricula digite: ' + "\n" +
-            '-m=1' + "\n" +
+            '-m=inscribirse' + "\n" +
             '-i=(EL ID DEL CURSO)' + "\n" +
             '-n=(SU NOMBRE)' + "\n" +
             '-c=(SU CEDULA)' + "\n");

@@ -1,0 +1,5 @@
+El nombre del estudiante es: Alexander
+ Con cédula de ciudadania # : 4567
+ se ha matriculado en el curso con id  : (4)-javascript avanzado1
+ Tiene una duracion de de : 40 horas
+ valor a cancelar de la matricula : $ 444000
