@@ -47,9 +47,9 @@ let inscribirse = (argv) => {
             // texto txt             
             texto = ('El nombre del estudiante es: ' + argv.n + "\r\n" +
                     ' Con cédula de ciudadania # : ' + argv.c + "\r\n" +
-                    ' se ha matriculado en el curso con id  : (' + argv.i + ')-' + cursoX.nombre + "\r\n" +
+                    ' Se ha matriculado en el curso con id  : (' + argv.i + ')-' + cursoX.nombre + "\r\n" +
                     ' Tiene una duracion de de : '+cursoX.duracionhoras +' horas' + "\r\n" +
-                    ' valor a cancelar de la matricula : $ ' + cursoX.valor);
+                    ' Valor a cancelar de la matricula : $ ' + cursoX.valor);
             fs.writeFile(argv.n + argv.c + 'Matricula.txt', texto, (err) => {
                 if (err) throw (err);                
                 console.log('Se ha creado el archivo, y la matricula se ha generado correctamente, bienvenido al curso de ' + cursoX.nombre )
@@ -58,9 +58,9 @@ let inscribirse = (argv) => {
             // texto html
             textoHtml = ('El nombre del estudiante es: <b>' + argv.n + '</b> <br/>' +
                         ' Con cédula de ciudadania # : <b>' + argv.c + '</b> <br/>' +
-                        ' se ha matriculado en el curso con id  : <b>(' + argv.i + ')-' + cursoX.nombre + '</b> <br/>' +
+                        ' Se ha matriculado en el curso con id  : <b>(' + argv.i + ')-' + cursoX.nombre + '</b> <br/>' +
                         ' Tiene una duracion de de : <b>'+cursoX.duracionhoras +' horas' + '</b> <br/>' +
-                        ' valor a cancelar de la matricula : $ <b>' + cursoX.valor+ '</b> <br/>');
+                        ' Valor a cancelar de la matricula : $ <b>' + cursoX.valor+ '</b> <br/>');
 
             app.get('/', function (req, res) {
                 res.send(textoHtml)
