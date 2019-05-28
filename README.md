@@ -17,5 +17,7 @@
 #imprimir con servidor express 
 
 Seguir las indicaciones de la priera entrega y en el explorador de internet : http://localhost:3000/
-para visualizar el curso en el cual se matriculo
+para visualizar el curso en el cual se matriculo.
+
+
 
