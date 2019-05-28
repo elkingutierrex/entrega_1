@@ -1,5 +1,0 @@
-El nombre del estudiante es: elkin
- Con cédula de ciudadania # : 4
- se ha matriculado en el curso con id  : (2)-programacion funcional
- Tiene una duracion de de : 25 horas
- valor a cancelar de la matricula : $ 488000

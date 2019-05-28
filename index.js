@@ -1,4 +1,6 @@
 const opcCurso = require('./EducacionContinuaTda');
+var express = require('express')
+var app = express()
 const fs = require('fs');
 
 const opciones = {
@@ -42,6 +44,7 @@ let inscribirse = (argv) => {
             console.log('El ID del curso que ingresastes NO EXISTE');
             return;
         } else {
+            // texto txt             
             texto = ('El nombre del estudiante es: ' + argv.n + "\r\n" +
                     ' Con cédula de ciudadania # : ' + argv.c + "\r\n" +
                     ' se ha matriculado en el curso con id  : (' + argv.i + ')-' + cursoX.nombre + "\r\n" +
@@ -51,6 +54,19 @@ let inscribirse = (argv) => {
                 if (err) throw (err);                
                 console.log('Se ha creado el archivo, y la matricula se ha generado correctamente, bienvenido al curso de ' + cursoX.nombre )
             })
+
+            // texto html
+            textoHtml = ('El nombre del estudiante es: <b>' + argv.n + '</b> <br/>' +
+                        ' Con cédula de ciudadania # : <b>' + argv.c + '</b> <br/>' +
+                        ' se ha matriculado en el curso con id  : <b>(' + argv.i + ')-' + cursoX.nombre + '</b> <br/>' +
+                        ' Tiene una duracion de de : <b>'+cursoX.duracionhoras +' horas' + '</b> <br/>' +
+                        ' valor a cancelar de la matricula : $ <b>' + cursoX.valor+ '</b> <br/>');
+
+            app.get('/', function (req, res) {
+                res.send(textoHtml)
+              })
+              
+              app.listen(3000)
 
         }
 
